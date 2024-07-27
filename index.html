@@ -1,0 +1,57 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTech Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>FinTech Platform</h1>
+        </header>
+        <nav>
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register</button>
+            <button id="logoutBtn" style="display: none;">Logout</button>
+        </nav>
+        <main>
+            <div id="loginForm" style="display: none;">
+                <h2>Login</h2>
+                <input type="text" id="loginUsername" placeholder="Username">
+                <input type="password" id="loginPassword" placeholder="Password">
+                <button id="submitLogin">Login</button>
+            </div>
+            <div id="registerForm" style="display: none;">
+                <h2>Register</h2>
+                <input type="text" id="registerUsername" placeholder="Username">
+                <input type="email" id="registerEmail" placeholder="Email">
+                <input type="password" id="registerPassword" placeholder="Password">
+                <button id="submitRegister">Register</button>
+            </div>
+            <div id="dashboard" style="display: none;">
+                <h2>Dashboard</h2>
+                <div id="accountsList"></div>
+                <button id="createAccountBtn">Create New Account</button>
+                <div id="transactionForm" style="display: none;">
+                    <h3>New Transaction</h3>
+                    <select id="accountSelect"></select>
+                    <input type="number" id="transactionAmount" placeholder="Amount">
+                    <select id="transactionType">
+                        <option value="deposit">Deposit</option>
+                        <option value="withdrawal">Withdrawal</option>
+                    </select>
+                    <input type="text" id="transactionDescription" placeholder="Description">
+                    <button id="submitTransaction">Submit Transaction</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
